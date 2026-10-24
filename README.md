@@ -21,23 +21,4 @@ JavaScript
 Git
 GitHub
 
-Client Features
 
-Photography and videography service packages
-Sample photos and videos gallery
-Booking and reservation system
-Calendar for checking available schedules
-Payment processing and payment status tracking
-
-Admin Features
-
-Administrative dashboard
-Reservation management
-Schedule management
-Calendar management
-Booking and payment status monitoring
-Management of service packages and gallery content
-
-Version Control
-
-Git will be used to track project changes and manage feature branches. GitHub will be used to store the repository and support collaboration and code review.
