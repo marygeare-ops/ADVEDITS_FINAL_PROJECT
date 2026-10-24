@@ -7,3 +7,5 @@
     <li>Birthday Photography</li>
     <li>Event Videography</li>
 </ul>
+
+<p>Every project captures special moments and memories.</p>
