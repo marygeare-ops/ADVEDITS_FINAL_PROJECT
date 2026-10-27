@@ -1,125 +1,58 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Photography and videography services by ADV-EDITS.">
-    <title>ADV-EDITS | Services</title>
+@extends('layouts.app')
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+@section('content')
+<style>
+    .services-page {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
+    .intro {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-        header {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 24px 20px;
-        }
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+    }
 
-        header h1 {
-            margin: 0 0 8px;
-            letter-spacing: 3px;
-        }
+    .service-card {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
 
-        nav {
-            margin-top: 18px;
-        }
+    .service-card h3 {
+        margin-top: 0;
+    }
+</style>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-        }
+<main class="services-page">
+    <section class="intro">
+        <h2>Our Services</h2>
+        <p>We capture your special moments and turn them into lasting memories.</p>
+    </section>
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    <section class="services">
+        <article class="service-card">
+            <h3>Wedding Coverage</h3>
+            <p>Photography and videography for weddings and special celebrations.</p>
+        </article>
 
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+        <article class="service-card">
+            <h3>Birthday Coverage</h3>
+            <p>Keep the best memories of your birthday and family celebrations.</p>
+        </article>
 
-        .intro {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .service-card h3 {
-            margin-top: 0;
-        }
-
-        footer {
-            background: #111;
-            color: #ccc;
-            text-align: center;
-            padding: 18px;
-            margin-top: 50px;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1>ADV-EDITS</h1>
-        <p>Photography and Videography Services</p>
-
-        <nav>
-            <a href="/">Home</a>
-            <a href="/services">Services</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="intro">
-            <h2>Our Services</h2>
-            <p>We capture your special moments and turn them into lasting memories.</p>
-        </section>
-
-        <section class="services">
-            <article class="service-card">
-                <h3>Wedding Coverage</h3>
-                <p>Photography and videography for weddings and special celebrations.</p>
-            </article>
-
-            <article class="service-card">
-                <h3>Birthday Coverage</h3>
-                <p>Keep the best memories of your birthday and family celebrations.</p>
-            </article>
-
-            <article class="service-card">
-                <h3>Special Events</h3>
-                <p>Photo and video coverage for other important occasions and events.</p>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 ADV-EDITS. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <article class="service-card">
+            <h3>Special Events</h3>
+            <p>Photo and video coverage for other important occasions and events.</p>
+        </article>
+    </section>
+</main>
+@endsection
