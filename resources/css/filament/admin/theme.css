@@ -1,0 +1,398 @@
+
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+/* =========================================
+   ADV-EDITS ADMIN THEME
+========================================= */
+
+:root {
+    --adv-sidebar-bg: #211812;
+    --adv-sidebar-secondary: #30231B;
+    --adv-sidebar-hover: #3B2B21;
+    --adv-sidebar-active: #493528;
+
+    --adv-text-primary: #F5EBDD;
+    --adv-text-secondary: #B9A28D;
+    --adv-text-muted: #8E7662;
+
+    --adv-accent: #C5A477;
+    --adv-accent-hover: #D7B88F;
+    --adv-border: #49372B;
+
+    --adv-page-bg: #F4EFE8;
+    --adv-content-text: #30251E;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.fi-body,
+.fi-layout,
+.fi-main-ctn,
+.fi-main {
+    background: var(--adv-page-bg) !important;
+    color: var(--adv-content-text);
+}
+
+.fi-main,
+.fi-main-ctn,
+.fi-page {
+    min-width: 0 !important;
+    width: 100%;
+    max-width: none !important;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.fi-sidebar {
+    background: var(--adv-sidebar-bg) !important;
+    color: var(--adv-text-primary) !important;
+    border-right: 1px solid var(--adv-border) !important;
+}
+
+.fi-sidebar-header-ctn,
+.fi-sidebar-header,
+.fi-sidebar-nav,
+.fi-sidebar-footer {
+    background: var(--adv-sidebar-bg) !important;
+}
+
+.fi-sidebar-header {
+    padding: 24px 15px 18px !important;
+    border: 0 !important;
+}
+
+/* Sidebar logo container */
+
+.fi-sidebar-header-logo-ctn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* =========================================
+   ADV-EDITS BRANDING
+========================================= */
+
+.adv-admin-brand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.adv-admin-logo-circle {
+    width: 88px;
+    height: 88px;
+    min-width: 88px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--adv-sidebar-secondary);
+    border: 2px solid var(--adv-accent);
+    margin-bottom: 15px;
+}
+
+.adv-admin-logo-circle span {
+    font-size: 34px;
+    color: var(--adv-accent);
+}
+
+.adv-admin-brand-name {
+    color: var(--adv-text-primary);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.4;
+}
+
+.adv-admin-brand-subtitle {
+    margin-top: 7px;
+    color: var(--adv-text-secondary);
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.fi-topbar-ctn,
+.fi-topbar {
+    background: var(--adv-sidebar-bg) !important;
+}
+
+.fi-topbar {
+    border-bottom: 1px solid var(--adv-border) !important;
+}
+
+.fi-topbar button {
+    color: var(--adv-text-primary);
+}
+
+.fi-topbar svg {
+    color: var(--adv-accent);
+}
+
+/* Hide branding from horizontal topbar */
+
+.fi-topbar-start > a,
+.fi-topbar-start > .fi-logo,
+.fi-topbar-start > .adv-admin-brand {
+    display: none !important;
+}
+
+/* =========================================
+   NAVIGATION TOGGLE BUTTONS
+========================================= */
+
+.fi-topbar-open-sidebar-btn,
+.fi-topbar-close-sidebar-btn,
+.fi-topbar-open-collapse-sidebar-btn,
+.fi-topbar-close-collapse-sidebar-btn,
+.fi-sidebar-open-collapse-sidebar-btn,
+.fi-sidebar-close-collapse-sidebar-btn {
+    border-radius: 8px !important;
+    background: var(--adv-sidebar-secondary) !important;
+    color: var(--adv-accent) !important;
+    border: 1px solid var(--adv-border) !important;
+    cursor: pointer;
+}
+
+.fi-topbar-open-sidebar-btn:hover,
+.fi-topbar-close-sidebar-btn:hover,
+.fi-topbar-open-collapse-sidebar-btn:hover,
+.fi-topbar-close-collapse-sidebar-btn:hover,
+.fi-sidebar-open-collapse-sidebar-btn:hover,
+.fi-sidebar-close-collapse-sidebar-btn:hover {
+    background: var(--adv-sidebar-hover) !important;
+    color: var(--adv-accent-hover) !important;
+}
+
+/* =========================================
+   SIDEBAR NAVIGATION
+========================================= */
+
+.fi-sidebar-nav {
+    padding: 15px 20px 32px !important;
+}
+
+.fi-sidebar-nav::before {
+    content: "MAIN MENU";
+    display: block;
+    margin: 12px 0 14px 12px;
+    color: var(--adv-text-muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.fi-sidebar-group-label {
+    color: var(--adv-text-muted) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+}
+
+.fi-sidebar-item {
+    margin-bottom: 7px !important;
+}
+
+.fi-sidebar-item-btn {
+    min-height: 46px !important;
+    padding: 13px 14px !important;
+    border-radius: 8px !important;
+    transition: background .2s ease, color .2s ease !important;
+}
+
+.fi-sidebar-item-label {
+    color: var(--adv-text-secondary) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.fi-sidebar-item-icon {
+    width: 22px !important;
+    height: 22px !important;
+    color: var(--adv-accent) !important;
+}
+
+.fi-sidebar-item-btn:hover {
+    background: var(--adv-sidebar-hover) !important;
+}
+
+.fi-sidebar-item-btn:hover .fi-sidebar-item-label {
+    color: var(--adv-text-primary) !important;
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+.fi-sidebar-item-btn[aria-current="page"] {
+    background: var(--adv-sidebar-active) !important;
+    box-shadow: inset 3px 0 0 var(--adv-accent) !important;
+}
+
+.fi-sidebar-item.fi-active .fi-sidebar-item-label,
+.fi-sidebar-item-btn[aria-current="page"] .fi-sidebar-item-label {
+    color: var(--adv-text-primary) !important;
+}
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+
+.fi-header-heading {
+    color: var(--adv-content-text) !important;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.fi-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.fi-sidebar::-webkit-scrollbar-thumb {
+    background: var(--adv-sidebar-active);
+    border-radius: 10px;
+}
+
+/* =========================================
+   MOBILE SIDEBAR
+========================================= */
+
+.adv-mobile-sidebar-controls {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+
+    .fi-sidebar {
+        max-width: 85vw !important;
+    }
+
+    .fi-sidebar-header {
+        padding: 36px 15px 20px !important;
+    }
+
+    .fi-sidebar-header-logo-ctn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: visible !important;
+    }
+
+    .adv-admin-brand {
+        padding: 8px 0;
+    }
+
+    .adv-admin-logo-circle {
+        width: 74px;
+        height: 74px;
+        min-width: 74px;
+        margin-top: 5px;
+        margin-bottom: 12px;
+    }
+
+    .adv-admin-brand-name {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .adv-admin-brand-name,
+    .adv-admin-brand-subtitle {
+        white-space: nowrap;
+    }
+
+    .adv-mobile-sidebar-controls {
+        display: flex;
+        justify-content: flex-end;
+        padding: 12px 15px 0;
+        background: var(--adv-sidebar-bg);
+    }
+
+    .adv-mobile-sidebar-close {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--adv-border);
+        border-radius: 8px;
+        background: var(--adv-sidebar-secondary);
+        color: var(--adv-accent);
+        cursor: pointer;
+    }
+
+    .adv-mobile-sidebar-close:hover {
+        background: var(--adv-sidebar-hover);
+        color: var(--adv-accent-hover);
+    }
+
+    .fi-topbar-close-sidebar-btn {
+        display: none !important;
+    }
+
+    .fi-topbar-open-collapse-sidebar-btn,
+    .fi-topbar-close-collapse-sidebar-btn {
+        display: none !important;
+    }
+}
+
+/* =========================================
+   DESKTOP SIDEBAR LOGO VISIBILITY
+========================================= */
+
+@media (min-width: 1024px) {
+
+    .fi-sidebar-header-ctn {
+        min-height: 220px !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .fi-sidebar-header {
+        min-height: 220px !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 24px 15px !important;
+        overflow: visible !important;
+    }
+
+    .fi-sidebar-header-logo-ctn {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: visible !important;
+    }
+
+    .fi-sidebar-header-logo-ctn .fi-logo {
+        width: 100% !important;
+        height: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        overflow: visible !important;
+    }
+
+    .adv-admin-brand {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 0 !important;
+    }
+}
